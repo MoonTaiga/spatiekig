@@ -1,0 +1,68 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+@layer base {
+    body {
+        @apply bg-slate-200;
+    }
+
+    input,
+    textarea {
+        @apply py-2 px-1 border border-gray-500 rounded-lg;
+    }
+
+    form {
+        @apply flex flex-col gap-4;
+    }
+
+    label {
+        @apply capitalize;
+    }
+
+    table {
+        @apply table-auto border-collapse;
+    }
+
+    thead,
+    tbody,
+    th,
+    td {
+        @apply py-2 px-3 capitalize;
+    }
+}
+@layer utilities {
+    .content-center {
+        @apply min-h-screen w-full flex justify-center items-center;
+    }
+
+    .form {
+        @apply flex flex-col gap-5 shadow-xl py-5 px-7;
+    }
+
+    .inputs {
+        @apply flex flex-col gap-2;
+    }
+
+    .error {
+        @apply text-sm text-red-500;
+    }
+    .login-register-btn {
+        @apply w-full py-2 rounded-lg border border-green-600 text-sm font-bold text-black/90 transform transition-colors hover:bg-green-600 hover:text-white/90 duration-100 ease-in-out;
+    }
+    .btn {
+        @apply text-sm font-semibold rounded-lg py-2 px-5 border transform transition-colors hover:text-white duration-100;
+    }
+}
